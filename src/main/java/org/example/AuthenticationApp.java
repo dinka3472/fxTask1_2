@@ -1,10 +1,11 @@
 package org.example;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.example.Config.AppConfig;
-import org.example.view.PrimaryAuthenticationView;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -18,12 +19,13 @@ public class AuthenticationApp extends Application {
     private AppConfig appConfig;
 
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws IOException {
         appConfig = new AppConfig();
         createDatabaseSchema();
 
-        PrimaryAuthenticationView authenticationView = new PrimaryAuthenticationView();
-        Scene scene = new Scene(authenticationView, 320, 240);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/PrimaryAuthenticationView.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root, 320, 240);
         stage.setTitle("Окно авторизации");
         stage.setScene(scene);
         stage.show();

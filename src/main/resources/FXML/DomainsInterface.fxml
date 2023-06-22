@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+
+<VBox prefHeight="300" prefWidth="500" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.Controller.DomainsInterfaceController">
+    <Label fx:id="titleLabel" />
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="idColumn" text="id" />
+            <TableColumn fx:id="webNameColumn" text="webName" />
+            <TableColumn fx:id="domainNameColumn" text="domainName" />
+            <TableColumn fx:id="ipColumn" text="ip" />
+            <TableColumn fx:id="dateColumn" text="dateRegistered" />
+            <TableColumn fx:id="countryRegisteredColumn" text="countryRegistered" />
+        </columns>
+    </TableView>
+</VBox>

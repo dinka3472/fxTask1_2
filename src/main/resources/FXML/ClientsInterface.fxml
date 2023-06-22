@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox minHeight="500" minWidth="700" prefHeight="500" prefWidth="700" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller.ClientsInterfaceController">
+    <TableView fx:id="tableView" onMouseClicked="#setDoubleClickHandler" prefHeight="500" prefWidth="700">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="56.0" text="id" />
+            <TableColumn fx:id="jobColumn" prefWidth="159.0" text="jobTitle" />
+            <TableColumn fx:id="nameColumn" prefWidth="174.0" text="firstNameLastName" />
+            <TableColumn fx:id="phoneColumn" prefWidth="98.0" text="phone" />
+            <TableColumn fx:id="emailColumn" prefWidth="113.0" text="email" />
+            <TableColumn fx:id="countDomainColumn" prefWidth="108.0" text="countDomain" />
+        </columns>
+    </TableView>
+</VBox>
