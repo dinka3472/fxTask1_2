@@ -2,8 +2,6 @@ package org.example.Models;
 
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 @Getter
@@ -26,5 +24,18 @@ public class PersonDto {
         this.phone = person.getPhone();
         this.domains = person.getDomains();
         this.countDomain = person.getDomains().size();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PersonDto personDto = (PersonDto) o;
+        return id == personDto.id && countDomain == personDto.countDomain && Objects.equals(jobTitle, personDto.jobTitle) && Objects.equals(firstNameLastName, personDto.firstNameLastName) && Objects.equals(phone, personDto.phone) && Objects.equals(email, personDto.email) && Objects.equals(domains, personDto.domains);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, jobTitle, firstNameLastName, phone, email, countDomain);
     }
 }
