@@ -1,0 +1,119 @@
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.root {
+    -fx-background-color:  linear-gradient(to right, rgb(63, 120, 126), rgb(147, 249, 185));
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(147, 249, 185, 0.91);
+    -fx-border-radius: 10;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+    -fx-text-fill: #020202;
+}
+
+.password-field {
+    -fx-font-size: 14px;
+    -fx-text-fill: #020202;
+}
+
+.all_button {
+    -fx-font-size: 14px;
+    -fx-background-color: rgb(65, 111, 155); /* Цвет фона кнопки */
+    -fx-text-fill: white; /* Цвет текста кнопки */
+
+}
+.close_button {
+    -fx-font-size: 14px;
+    -fx-background-color: rgb(147, 249, 185);
+    -fx-text-fill: rgb(65, 111, 155);
+
+}
+
+.result-label {
+    -fx-font-size: 14px;
+}
+
+
+/* Стили для TableView
+.root{
+    -fx-background-color: #262626;
+}*/
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view,
+.table-view .column-header,
+.table-view .column-header-background .filler,
+.table-view .corner {
+    -fx-background-color: rgb(147, 249, 185);
+}
+
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: rgba(147, 249, 185, 0.39);
+    -fx-text-background-color: rgb(2, 2, 2);;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: rgba(169, 250, 200, 0.99);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:even{
+    -fx-background-color: rgba(170, 239, 255, 0.98);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:highlighted {
+    -fx-background-color: -primary;
+    -fx-background-radius: 5px;
+    -fx-background-insets: 2px;
+}
+.table-row-cell:selected {
+    -fx-background-color: rgb(123, 161, 137);
+    -fx-text-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-background-insets: 2px;
+}
+
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: rgb(147, 249, 185);
+}
+
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to right, rgba(30, 193, 227, 0.7), rgba(147, 249, 249, 0.61));
+}
+
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, rgba(30, 193, 227, 0.7), rgba(147, 249, 249, 0.61));
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}

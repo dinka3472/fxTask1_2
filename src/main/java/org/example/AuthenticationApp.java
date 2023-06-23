@@ -4,7 +4,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.example.Config.AppConfig;
 
 import java.io.BufferedReader;
@@ -25,8 +27,13 @@ public class AuthenticationApp extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/PrimaryAuthenticationView.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root, 320, 240);
+        Scene scene = new Scene(root);
         stage.setTitle("Окно авторизации");
+
+        stage.initStyle(StageStyle.TRANSPARENT);
+        scene.setFill(Color.TRANSPARENT);
+        scene.getStylesheets().add("/CSS/Style1.css");
+
         stage.setScene(scene);
         stage.show();
     }

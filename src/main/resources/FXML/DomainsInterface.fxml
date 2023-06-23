@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-
-<VBox prefHeight="300" prefWidth="500" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.Controller.DomainsInterfaceController">
-    <Label fx:id="titleLabel" />
-    <TableView fx:id="tableView">
-        <columns>
-            <TableColumn fx:id="idColumn" text="id" />
-            <TableColumn fx:id="webNameColumn" text="webName" />
-            <TableColumn fx:id="domainNameColumn" text="domainName" />
-            <TableColumn fx:id="ipColumn" text="ip" />
-            <TableColumn fx:id="dateColumn" text="dateRegistered" />
-            <TableColumn fx:id="countryRegisteredColumn" text="countryRegistered" />
-        </columns>
-    </TableView>
+<?import javafx.geometry.Insets?>
+<VBox fx:id="rootVBox" prefHeight="300" prefWidth="500" stylesheets="/CSS/Style1.css" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="org.example.Controller.DomainsInterfaceController" onMousePressed="#handleWindowDrag" onMouseDragged="#handleWindowDrag">
+    <HBox alignment="TOP_RIGHT">
+        <Label fx:id="titleLabel" alignment="TOP_LEFT" />
+        <Button styleClass="close_button" onAction="#handleCloseButtonAction" text="✕" />
+    </HBox>
+<TableView fx:id="tableView">
+    <columns>
+        <TableColumn fx:id="idColumn" text="id" />
+        <TableColumn fx:id="webNameColumn" text="webName" />
+        <TableColumn fx:id="domainNameColumn" text="domainName" />
+        <TableColumn fx:id="ipColumn" text="ip" />
+        <TableColumn fx:id="dateColumn" text="dateRegistered" />
+        <TableColumn fx:id="countryRegisteredColumn" text="countryRegistered" />
+    </columns>
+</TableView>
+    <HBox spacing="10" alignment="BOTTOM_CENTER">
+        <Button styleClass="all_button" text="Изменить стиль" onAction="#handleStyleSwitchButtonAction" />
+    </HBox>
 </VBox>

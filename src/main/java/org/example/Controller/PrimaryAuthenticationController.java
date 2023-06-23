@@ -1,14 +1,17 @@
 package org.example.Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.example.Service.UserService;
 
 import java.io.IOException;
@@ -44,6 +47,11 @@ public class PrimaryAuthenticationController {
             resultLabel.setTextFill(Color.RED);
         }
     }
+    @FXML
+    private void handleCloseButtonAction(ActionEvent event) {
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        stage.close();
+    }
 
     private void openClientsInterface() {
         try {
@@ -55,11 +63,16 @@ public class PrimaryAuthenticationController {
 
             clientsStage.setScene(scene);
             clientsStage.setTitle("Клиенты");
-            clientsStage.show();
-
             Stage currentStage = (Stage) usernameField.getScene().getWindow();
-            currentStage.close();
 
+            clientsStage.initStyle(StageStyle.TRANSPARENT);
+            scene.setFill(Color.TRANSPARENT);
+            scene.getStylesheets().add("/CSS/Style1.css");
+
+
+
+            currentStage.close();
+            clientsStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }

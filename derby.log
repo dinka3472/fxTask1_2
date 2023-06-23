@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Thu Jun 22 20:20:32 YEKT 2023:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0188-e3b1-5ca4-000005f4a350 
+Fri Jun 23 21:20:36 YEKT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0188-e90e-b841-000005f43fd0 
 on database directory C:\Users\Alan\Documents\study2\Projects\fxTask1_2\PersonsDB with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
 Loaded from file:/C:/Users/Alan/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
